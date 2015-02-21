@@ -1,0 +1,21 @@
+<html>
+<script>
+var xmlhttp=new XMLHttpRequest();
+setInterval(function() {
+	document.getElementById("grillImg").src = "shot.jpg?nocache=" + new Date().valueOf(); 
+}, 2000);
+</script>
+<body>
+	<h1>Grilldonics</h1>
+	<button onclick="xmlhttp.open('POST','http://86.158.247.235:8001/lid'); xmlhttp.send();">Lid</button>
+	</br>
+	<button onclick="xmlhttp.open('POST','http://86.158.247.235:8001/rotisserie'); xmlhttp.send();">Rotisserie</button>
+	</br>
+	<button onclick="xmlhttp.open('POST','http://86.158.247.235:8001/burner'); xmlhttp.send();">Burner</button>
+	</br>
+	<h2>Your Grilldonics</h2>
+	... don't let the meat BURN!</br>
+	<img src="shot.jpg" id="grillImg"></img>
+
+</body>
+</html>
